@@ -3,6 +3,7 @@ import { FiTerminal } from "react-icons/fi";
 import { FaRegHandshake } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import Nav from "./Nav";
+import MobileNav from "./ui/MobileNav";
 
 const Header = () => {
   return (
@@ -21,13 +22,15 @@ const Header = () => {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-            <MagicButton icon={<FaRegHandshake />} />
+            <MagicButton icon={<FaRegHandshake />} >
+              Hire Me
+            </MagicButton>
           </Link>
         </div>
 
         {/* mobile nav */}
         <div className="xl:hidden">
-          mobile nav
+          <MobileNav />
         </div>
       </div>
     </header>
