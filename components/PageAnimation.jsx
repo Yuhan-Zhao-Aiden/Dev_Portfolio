@@ -8,21 +8,27 @@ const PageAnimation = ({ children }) => {
 
   return (
     <AnimatePresence>
-
       <div key={pathname}>
         <motion.div
           key={pathname}
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
-            transition: { delay: 0.4, duration: 1, ease: "easeInOut"}
+            transition: { delay: 0.4, duration: 1, ease: "easeInOut" },
           }}
-          className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
+          className="h-screen w-screen fixed bg-primary top-0 pointer-events-none z-500"
         />
-        {children}
+        <motion.div
+          key={`${pathname}-content`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 1, duration: 1 } }}
+          exit={{ opacity: 0 }}
+        >
+          {children}
+        </motion.div>
       </div>
     </AnimatePresence>
-  )
-}
+  );
+};
 
-export default PageAnimation
+export default PageAnimation;

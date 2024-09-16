@@ -14,9 +14,9 @@ import { usePathname } from "next/navigation";
 // };
 
 const colors = {
-  "/": "bg-[#FF6663]",
+  "/": "bg-accent",
   "/services": "bg-[#BFD7EA]",
-  "/resume": "bg-accent",
+  "/resume": "bg-[#FF6663]",
   "/work": "bg-[#8B5FBF]",
   "/contact": "bg-[#03F7EB]"
 }

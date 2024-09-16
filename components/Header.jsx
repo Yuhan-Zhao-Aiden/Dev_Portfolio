@@ -22,7 +22,7 @@ const Header = () => {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-            <MagicButton icon={<FaRegHandshake />} >
+            <MagicButton className="px-5" icon={<FaRegHandshake />} >
               Hire Me
             </MagicButton>
           </Link>

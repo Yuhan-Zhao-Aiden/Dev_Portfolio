@@ -8,6 +8,9 @@ import { FiTerminal } from "react-icons/fi";
 import { links } from "@/data";
 
 const MobileNav = () => {
+
+  const pathname = usePathname();
+
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
@@ -26,7 +29,23 @@ const MobileNav = () => {
           </Link>
         </div>
 
-        <nav>nav</nav>
+        {/* nav */}
+        <nav className="flex flex-col gap-7 px-3">
+          {links.map((link) => {
+            return (
+              <Link 
+                key={link.name} 
+                href={link.path}
+                className={`${pathname === link.path && "text-accent border-b-2 border-accent"} text-xl capitalize hover:text-accent transiton-all`}
+              >
+                <div className="flex justify-between">
+                  {link.name}
+                  {link.icon}
+                </div>
+              </Link>
+            )
+          })}
+        </nav>
       </SheetContent>
     </Sheet>
   );
