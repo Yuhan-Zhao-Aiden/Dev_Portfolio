@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+
+  :root {
+    --chart-1: 12 76% 61%;  /* Red-orange */
+    --chart-2: 210 90% 55%; /* Bright blue */
+    --chart-3: 140 65% 45%; /* Rich green */
+    --chart-4: 45 85% 60%;  /* Warm yellow */
+    --chart-5: 290 75% 70%; /* Soft purple */
+  }
+
   body {
     @apply font-primary bg-primary text-white leading-loose;
   }
